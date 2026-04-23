@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        font-family: "Inter" !important;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body class="font-[Inter]">
+    <section class="bg-[#EDEEF1] h-screen flex justify-center">
+      <div
+        class="max-w-[694px] mt-8 bg-white rounded-xl py-3 px-3 sm:px-[50px] sm:py-[50px] h-fit"
+      >
+        <p
+          class="text-[#1E2358] font-semibold text-[16x] whitespace-nowrap sm:text-xl leading-[22px] sm:leading-7 tracking-normal"
+        >
+          Select your payment method:
+        </p>
+
+        <label
+          class="flex cursor-pointer justify-between items-center border-[1.5px] rounded-lg border-[#B6BAC3] mt-5 sm:mt-6 px-3 sm:px-4 py-2 sm:py-2"
+        >
+          <div class="flex gap-2 items-center">
+            <input
+              type="radio"
+              name="option"
+              checked
+              class="h-[15px] w-[15px] sm:h-5 sm:w-5 accent-[#1E2358] outline-none focus:outline-none focus:ring-0"
+            />
+            <div>
+              <p
+                class="font-medium text-sm sm:text-base whitespace-nowrap sm:leading-6 leading-5 tracking-normal text-[#1E2358]"
+              >
+                Credit/Debit Card
+              </p>
+              <p
+                class="font-normal text-xs whitespace-nowrap sm:text-sm sm:leading-5 leading-4 tracking-normal text-[#5B616E]"
+              >
+                Pay with Visa, Master Card...
+              </p>
+            </div>
+          </div>
+
+          <div class="flex sm:gap-[8.2px] gap-[5.27px]">
+            <img
+              src="./icons/Group.svg"
+              class="sm:w-[35px] w-[22px] h-[16px] sm:h-[25px]"
+            />
+            <img
+              src="./icons/visa.svg"
+              class="w-[22px] h-[16px] sm:w-[35px] sm:h-[25px]"
+            />
+            <img
+              src="./icons/alfalah.svg"
+              class="w-[22px] h-[16px] sm:w-[35px] sm:h-[25px]"
+            />
+          </div>
+        </label>
+        <label
+          class="flex cursor-pointer justify-between items-center border-[1.5px] rounded-lg border-[#B6BAC3] mt-3 sm:mt-4 px-3 sm:px-4 py-2 sm:py-2"
+        >
+          <div class="flex gap-2 items-center">
+            <input
+              type="radio"
+              name="option"
+              class="h-[15px] w-[15px] sm:h-5 sm:w-5 accent-[#1E2358] outline-none focus:outline-none focus:ring-0"
+            />
+            <div>
+              <p
+                class="font-medium sm:text-base text-sm whitespace-nowrap sm:leading-6 leading-5 tracking-normal text-[#1E2358]"
+              >
+                Cryptocurrency
+              </p>
+              <p
+                class="font-normal text-xs whitespace-nowrap sm:text-sm sm:leading-5 leading-4 tracking-normal text-[#5B616E]"
+              >
+                Pay with BTC, ETH,XRP...
+              </p>
+            </div>
+          </div>
+
+          <div class="flex sm:gap-[8.2px] gap-1">
+            <img
+              src="./icons/bitcoin 1.svg"
+              class="sm:w-[26px] w-[23px] h-[23px] sm:h-[26px]"
+            />
+            <img
+              src="./icons/sss.svg"
+              class="w-[23px] h-[23px] sm:w-[26px] sm:h-[26px]"
+            />
+            <img
+              src="./icons/master-card.715a68b8 1 (1).svg"
+              class="w-[23px] h-[23px] sm:w-[26px] sm:h-[26px]"
+            />
+          </div>
+        </label>
+      </div>
+    </section>
+  </body>
+</html>
