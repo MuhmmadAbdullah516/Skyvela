@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        font-family: "Inter" !important;
+      }
+    </style>
+    <title>Package Payment</title>
+  </head>
+  <body class="font-[Inter]">
+    <section class="min-h-screen bg-[#EDEEF1] py-4">
+      <div class="mx-auto max-w-[1140px] px-4 sm:px-0">
+        <div
+          class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+        >
+          <h4
+            class="font-semibold text-2xl leading-7 tracking-[-0.2px] text-[#1E2358]"
+          >
+            Review Your Booking
+          </h4>
+          <div
+            class="flex flex-wrap items-center gap-2 sm:justify-end sm:gap-4"
+          >
+            <p
+              class="font-semibold text-sm leading-5 text-[#1E2358] tracking-normal align-middle whitespace-nowrap"
+            >
+              Traveler Details
+            </p>
+            <img
+              src="./icons/ic_chevron-right.svg"
+              alt="right-arrow"
+              class="h-6 w-6"
+            />
+            <p
+              class="font-semibold text-sm leading-5 text-[#1E2358] tracking-normal align-middle whitespace-nowrap"
+            >
+              Add - ons
+            </p>
+            <img
+              src="./icons/ic_chevron-right.svg"
+              alt="right-arrow"
+              class="h-6 w-6"
+            />
+            <p
+              class="font-semibold text-sm leading-5 text-[#1E2358] tracking-normal align-middle"
+            >
+              Review
+            </p>
+            <img
+              src="./icons/ic_chevron-right.svg"
+              alt="right-arrow"
+              class="h-6 w-6"
+            />
+            <p
+              class="font-semibold text-sm leading-5 text-[#1E2358] tracking-normal align-middle"
+            >
+              Payment
+            </p>
+            <img
+              src="./icons/ic_chevron-right.svg"
+              alt="right-arrow"
+              class="h-6 w-6"
+            />
+            <p
+              class="font-semibold text-sm leading-5 text-[#5B616E] tracking-normal align-middle"
+            >
+              Confirmation
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-[30px]"
+        >
+          <div class="flex w-full max-w-[694px] flex-col">
+            <div class="w-full max-w-[694px] bg-white rounded-xl py-5 px-6">
+              <div
+                class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="./icons/Frame 2147235767.png"
+                    alt="QutarAirways"
+                    class="h-[35.91px] w-[39.41px]"
+                  />
+                  <span
+                    class="font-medium text-[12.74px] leading-[16.98px] tracking-normal text-[#1E2358]"
+                    >QutarAirways</span
+                  >
+                </div>
+
+                <div
+                  class="bg-[#FDCC02] rounded-lg px-3 py-2 font-semibold text-base leading-6 text-[#1E2358] tracking-normal"
+                >
+                  One Way
+                </div>
+              </div>
+
+              <div
+                class="mt-5 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-5"
+              >
+                <div class="text-left">
+                  <p
+                    class="font-semibold text-xl leading-7 tracking-normal text-[#1E2358]"
+                  >
+                    20:15
+                  </p>
+                  <p
+                    class="font-medium text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    DAC
+                  </p>
+                </div>
+
+                <div class="relative flex-1">
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 bg-[#1E2358] rounded-full"></div>
+
+                    <div
+                      class="mx-1 h-px flex-1 border-t border-dashed border-[#1E2358]"
+                    ></div>
+
+                    <div class="w-3 h-3 bg-[#1E2358] rounded-full"></div>
+                  </div>
+
+                  <div
+                    class="absolute left-1/2 top-1/2 w-max -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <button
+                      class="rounded-3xl bg-[#EDEEF1] px-3 py-1 text-sm font-semibold leading-5 tracking-normal text-[#1E2358] sm:text-base sm:leading-6"
+                    >
+                      12 hr 30 min
+                    </button>
+                    <p
+                      class="text-sm font-semibold leading-5 tracking-normal text-center text-[#5B616E]"
+                    >
+                      2 stop
+                    </p>
+                  </div>
+                </div>
+
+                <div class="text-right">
+                  <p
+                    class="font-semibold text-xl leading-7 tracking-normal text-[#1E2358]"
+                  >
+                    12:25
+                  </p>
+                  <p
+                    class="font-medium text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    CXB
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="w-full mt-5 border-t border-dashed border-[#B6BAC3]"
+              ></div>
+
+              <div
+                class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <p
+                  class="font-semibold text-base leading-6 tracking-normal underline text-[#1E2358]"
+                >
+                  Flight Details
+                </p>
+
+                <div
+                  class="flex items-center gap-2 bg-[#EDEEF1] py-2 px-3 rounded-lg"
+                >
+                  <img
+                    src="./icons/Arrow-down.svg"
+                    alt="arrow down"
+                    class="h-[16.91px] w-[16.91px]"
+                  />
+                  <span
+                    class="text-[#1E2358] font-semibold text-base leading-6 tracking-normal"
+                    >Change Flight</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full max-w-[694px] mt-8 bg-white rounded-xl p-3">
+              <div class="flex flex-col gap-5 sm:flex-row">
+                <div class="relative">
+                  <img
+                    src="./icons/hotel.png"
+                    alt="Paris hotel lobby"
+                    class="h-[220px] w-full rounded-lg object-cover sm:h-[270px] sm:w-[319px] md:w-[296px]"
+                  />
+                  <span
+                    class="absolute left-[8px] top-[5px] rounded bg-[#51606E] px-[7px] py-[2px] font-[Roboto] text-[10px] font-normal leading-4 tracking-normal text-[#FFFFFF]"
+                  >
+                    Top Seller
+                  </span>
+                </div>
+
+                <div class="flex-1">
+                  <div class="flex items-start justify-between gap-3">
+                    <div class="min-w-0">
+                      <h5
+                        class="text-lg font-semibold leading-[26px] tracking-normal text-[#1E2358]"
+                      >
+                        Paris, France
+                      </h5>
+                      <div class="mt-1 flex items-center gap-[3px]">
+                        <img
+                          src="./icons/star.76eea2e5 2.svg"
+                          class="h-2.5 w-2.5"
+                          alt="star"
+                        />
+                        <img
+                          src="./icons/star.76eea2e5 2.svg"
+                          class="h-2.5 w-2.5"
+                          alt="star"
+                        />
+                        <img
+                          src="./icons/star.76eea2e5 2.svg"
+                          class="h-2.5 w-2.5"
+                          alt="star"
+                        />
+                        <img
+                          src="./icons/star.76eea2e5 2.svg"
+                          class="h-2.5 w-2.5"
+                          alt="star"
+                        />
+                        <img
+                          src="./icons/star.76eea2e5 2.svg"
+                          class="h-2.5 w-2.5"
+                          alt="star"
+                        />
+                      </div>
+                      <div class="mt-2 flex items-center gap-1.5">
+                        <img
+                          src="./icons/Vector.svg"
+                          alt="location"
+                          class="w-[10px] h-[13px]"
+                        />
+                        <p
+                          class="mt-1 text-base font-medium leading-5 tracking-normal text-[#5B616E]"
+                        >
+                          Le Grand Hotel
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex shrink-0 items-start gap-2">
+                      <div
+                        class="rounded-lg bg-[#1E2358] px-2 py-1 text-center text-xs font-medium leading-4 tracking-normal text-[#FFFFFF]"
+                      >
+                        4.8<br />out of 5
+                      </div>
+                      <div>
+                        <p
+                          class="text-sm font-semibold leading-5 tracking-normal text-[#1E2358]"
+                        >
+                          Excellent
+                        </p>
+                        <p
+                          class="text-[#5B616E] font-normal text-sm leading-5 tracking-normal"
+                        >
+                          25 Reviews
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-3">
+                    <p
+                      class="text-[#1E2358] font-semibold text-sm leading-5 tracking-normal"
+                    >
+                      Facilities
+                    </p>
+                    <div class="mt-3 flex flex-wrap gap-x-[9px] gap-y-[9px]">
+                      <p
+                        class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                      >
+                        <img
+                          src="./icons/Group 98141.svg"
+                          alt=""
+                          class="h-3.5 w-3.5 shrink-0"
+                        />
+                        Breakfast included
+                      </p>
+                      <p
+                        class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                      >
+                        <img
+                          src="./icons/gwifi.20ba8188 1.svg"
+                          alt=""
+                          class="h-[13px] w-[13px] shrink-0"
+                        />
+                        Free Wifi
+                      </p>
+                      <p
+                        class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                      >
+                        <img
+                          src="./icons/spa.36f5a5be 1.svg"
+                          alt=""
+                          class="h-[13px] w-[13px] shrink-0"
+                        />
+                        Air Conditioning
+                      </p>
+                      <p
+                        class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                      >
+                        <img
+                          src="./icons/toilet-01.svg"
+                          alt=""
+                          class="h-[13px] w-[13px] shrink-0"
+                        />
+                        Toiletries
+                      </p>
+                      <p
+                        class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                      >
+                        <img
+                          src="./icons/tea.svg"
+                          alt=""
+                          class="h-[13px] w-[13px] shrink-0"
+                        />
+                        Tea
+                      </p>
+                    </div>
+
+                    <div class="mt-3">
+                      <p
+                        class="flex basis-full items-center gap-1 font-medium text-sm leading-5 tracking-normal text-[#5B616E]"
+                      >
+                        <img
+                          src="./icons/bed-double.svg"
+                          alt=""
+                          class="h-3.5 w-3.5 shrink-0"
+                        />
+                        Twin
+                      </p>
+                    </div>
+                    <p
+                      class="mt-[9px] flex items-center gap-1 font-medium text-sm leading-5 tracking-normal text-[#5B616E]"
+                    >
+                      <img
+                        src="./icons/user-multiple.svg"
+                        alt=""
+                        class="h-3.5 w-3.5 shrink-0"
+                      />
+                      Maximum Room Capacity: 2
+                    </p>
+                  </div>
+
+                  <div class="mt-3 flex justify-end">
+                    <div
+                      class="flex items-center gap-2 bg-[#EDEEF1] py-2 px-3 rounded-lg"
+                    >
+                      <img
+                        src="./icons/Arrow-down.svg"
+                        alt="arrow down"
+                        class="h-4 w-4"
+                      />
+                      <span
+                        class="text-[#1E2358] font-semibold text-base leading-6 tracking-normal"
+                        >Change Hotel</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="w-full max-w-[694px] mt-8 bg-white rounded-xl px-4 py-4"
+            >
+              <h5
+                class="font-semibold text-lg leading-[26px] tracking-normal text-[#1E2358]"
+              >
+                What's included
+              </h5>
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:gap-8">
+                <div
+                  class="included-left flex min-w-0 flex-1 flex-col gap-y-3 max-w-[197px]"
+                >
+                  <p
+                    class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    <img
+                      src="./icons/tick-02.svg"
+                      alt=""
+                      class="h-5 w-5 shrink-0"
+                    />
+                    Round-trip flights
+                  </p>
+                  <p
+                    class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    <img
+                      src="./icons/tick-02.svg"
+                      alt=""
+                      class="h-5 w-5 shrink-0"
+                    />
+                    Airport taxes &amp; fees
+                  </p>
+                  <p
+                    class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    <img
+                      src="./icons/tick-02.svg"
+                      alt=""
+                      class="h-5 w-5 shrink-0"
+                    />
+                    Free cancellation (48h)
+                  </p>
+                </div>
+                <div class="flex min-w-0 flex-1 flex-col gap-y-3">
+                  <p
+                    class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    <img
+                      src="./icons/tick-02.svg"
+                      alt=""
+                      class="h-5 w-5 shrink-0"
+                    />
+                    5 Nights Hotel accommodation
+                  </p>
+                  <p
+                    class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    <img
+                      src="./icons/tick-02.svg"
+                      alt=""
+                      class="h-5 w-5 shrink-0"
+                    />
+                    23kg checked baggage
+                  </p>
+                  <p
+                    class="flex items-center gap-1 font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    <img
+                      src="./icons/tick-02.svg"
+                      alt=""
+                      class="h-5 w-5 shrink-0"
+                    />
+                    24/7 customer support
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mt-8 h-fit w-full max-w-[694px] rounded-xl bg-white px-3 py-3 sm:px-[50px] sm:py-[50px]"
+            >
+              <p
+                class="text-base font-semibold leading-[22px] tracking-normal text-[#1E2358] sm:text-xl sm:leading-7"
+              >
+                Select your payment method:
+              </p>
+
+              <label
+                class="mt-5 flex cursor-pointer flex-col gap-3 rounded-lg border-[1.5px] border-[#B6BAC3] px-3 py-3 sm:mt-6 sm:flex-row sm:items-center sm:justify-between sm:px-4 sm:py-2"
+              >
+                <div class="flex gap-2 items-center">
+                  <input
+                    type="radio"
+                    name="option"
+                    checked
+                    class="h-[15px] w-[15px] sm:h-5 sm:w-5 accent-[#1E2358] outline-none focus:outline-none focus:ring-0"
+                  />
+                  <div>
+                    <p
+                      class="text-sm font-medium leading-5 tracking-normal text-[#1E2358] sm:text-base sm:leading-6"
+                    >
+                      Credit/Debit Card
+                    </p>
+                    <p
+                      class="text-xs font-normal leading-4 tracking-normal text-[#5B616E] sm:text-sm sm:leading-5"
+                    >
+                      Pay with Visa, Master Card...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex justify-end gap-[5.27px] sm:gap-[8.2px]">
+                  <img
+                    src="./icons/Group.svg"
+                    class="sm:w-[35px] w-[22px] h-4 sm:h-[25px]"
+                  />
+                  <img
+                    src="./icons/visa.svg"
+                    class="w-[22px] h-4 sm:w-[35px] sm:h-[25px]"
+                  />
+                  <img
+                    src="./icons/alfalah.svg"
+                    class="w-[22px] h-4 sm:w-[35px] sm:h-[25px]"
+                  />
+                </div>
+              </label>
+              <label
+                class="mt-3 flex cursor-pointer flex-col gap-3 rounded-lg border-[1.5px] border-[#B6BAC3] px-3 py-3 sm:mt-4 sm:flex-row sm:items-center sm:justify-between sm:px-4 sm:py-2"
+              >
+                <div class="flex gap-2 items-center">
+                  <input
+                    type="radio"
+                    name="option"
+                    class="h-[15px] w-[15px] sm:h-5 sm:w-5 accent-[#1E2358] outline-none focus:outline-none focus:ring-0"
+                  />
+                  <div>
+                    <p
+                      class="text-sm font-medium leading-5 tracking-normal text-[#1E2358] sm:text-base sm:leading-6"
+                    >
+                      Cryptocurrency
+                    </p>
+                    <p
+                      class="text-xs font-normal leading-4 tracking-normal text-[#5B616E] sm:text-sm sm:leading-5"
+                    >
+                      Pay with BTC, ETH,XRP...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex justify-end gap-1 sm:gap-[8.2px]">
+                  <img
+                    src="./icons/bitcoin 1.svg"
+                    class="sm:w-[26px] w-[23px] h-[23px] sm:h-[26px]"
+                  />
+                  <img
+                    src="./icons/sss.svg"
+                    class="w-[23px] h-[23px] sm:w-[26px] sm:h-[26px]"
+                  />
+                  <img
+                    src="./icons/master-card.715a68b8 1 (1).svg"
+                    class="w-[23px] h-[23px] sm:w-[26px] sm:h-[26px]"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div
+            class="right-div h-fit w-full max-w-[416px] rounded-xl bg-white px-4 py-5 sm:px-6 sm:py-6"
+          >
+            <div class="flex items-center gap-4">
+              <img
+                src="./icons/hotel.png"
+                alt="Paris hotel"
+                class="w-16 h-16"
+              />
+              <div>
+                <p
+                  class="font-semibold text-base leading-6 tracking-normal text-[#1E2358]"
+                >
+                  Paris, France
+                </p>
+                <p class="font-normal text-sm leading-5 text-[#5B616E]">
+                  5 Days - 5 Nights | 2 Adults
+                </p>
+              </div>
+            </div>
+
+            <hr class="text-[#B6BAC3] h-px mt-3" />
+
+            <div class="mt-3">
+              <p
+                class="font-medium text-base leading-6 tracking-normal text-[#1E2358]"
+              >
+                Fare Summary
+              </p>
+
+              <div class="mt-3">
+                <p
+                  class="font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                >
+                  Adult (1 traveler)
+                </p>
+
+                <div class="mt-1 flex items-start justify-between gap-4">
+                  <p
+                    class="font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    Base Fare
+                  </p>
+                  <p
+                    class="font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    USD <span class="text-[#1E2358] font-semibold">345</span>
+                  </p>
+                </div>
+
+                <div class="mt-1 flex items-start justify-between gap-4">
+                  <p
+                    class="font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    Tax
+                  </p>
+                  <p
+                    class="font-normal text-sm leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    USD <span class="text-[#1E2358] font-semibold">149</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5">
+              <p
+                class="font-medium text-base leading-6 tracking-normal text-[#1E2358]"
+              >
+                Add-ons
+              </p>
+
+              <div class="mt-3">
+                <div class="flex items-start justify-between gap-4">
+                  <p class="font-normal text-sm text-[#5B616E]">
+                    Seat Selection
+                  </p>
+                  <p class="font-normal text-sm text-[#5B616E]">
+                    USD <span class="text-[#1E2358] font-semibold">25</span>
+                  </p>
+                </div>
+
+                <div class="mt-1 flex items-start justify-between gap-4">
+                  <p class="font-normal text-sm text-[#5B616E]">
+                    Extra baggage
+                  </p>
+                  <p class="font-normal text-sm text-[#5B616E]">
+                    USD <span class="text-[#1E2358] font-semibold">45</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <hr class="text-[#B6BAC3] h-px mt-5" />
+
+            <div class="mt-5">
+              <div class="flex items-start justify-between gap-4">
+                <p class="font-normal text-sm text-[#5B616E]">Sub-Total</p>
+                <p class="font-normal text-sm text-[#5B616E]">
+                  USD <span class="text-[#1E2358] font-semibold">345</span>
+                </p>
+              </div>
+
+              <div class="mt-1 flex items-start justify-between gap-4">
+                <p class="font-normal text-sm text-[#5B616E]">
+                  Convenience Charge
+                </p>
+                <p class="font-normal text-sm text-[#5B616E]">
+                  USD <span class="text-[#1E2358] font-semibold">149</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="mt-3 flex items-start justify-between gap-4 rounded-lg bg-[#EDEEF1] px-5 py-5"
+            >
+              <p class="text-[#5B616E] font-normal text-sm">
+                You Pay (for 1 Traveler)
+              </p>
+              <p class="text-[#1E2358] font-semibold text-base">USD 579</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
