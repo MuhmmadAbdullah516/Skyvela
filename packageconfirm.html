@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        font-family: "Inter" !important;
+      }
+    </style>
+    <title>Package Booking Confirmation</title>
+  </head>
+  <body class="min-h-screen bg-[#EDEEF1] text-[#1E2358]">
+    <main class="px-[6px] py-[8px] sm:px-4 sm:py-6">
+      <section
+        class="mx-auto w-full max-w-[692px] rounded-2xl border-[0.5px] border-[#D9DCE3] bg-white px-3 py-6 sm:px-[50px] sm:py-[50px]"
+      >
+        <div class="flex flex-col items-center text-center">
+          <img
+            src="icons/verified-badge-check.svg"
+            alt="Success badge"
+            class="h-10 w-10 sm:h-[46px] sm:w-[46px]"
+          />
+          <!--  card title -->
+          <h1
+            class="mt-5 max-w-[180px] text-xl font-semibold leading-7 tracking-[-0.2px] text-[#1E2358] sm:max-w-none sm:text-[28px] sm:leading-8"
+          >
+            Your Packages Booking is successful!
+          </h1>
+
+          <p
+            class="mt-3 max-w-[319px] font-normal text-[#5B616E] sm:max-w-[492px] text-sm leading-5"
+          >
+            Thanks for booking with Skyvela. We have sent an e-ticket to your
+            registered email ID and mobile
+          </p>
+        </div>
+        <!-- Booking Refrence and  download ticket button -->
+        <div
+          class="mt-4 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-start sm:justify-between"
+        >
+          <div>
+            <p class="font-normal text-[#5B616E] text-sm leading-5">
+              Booking Reference
+            </p>
+            <p
+              class="mt-1 font-semibold text-[#1E2358] text-[20px] sm:leading-7"
+            >
+              VYG-UU79R
+            </p>
+          </div>
+
+          <button
+            type="button"
+            class="flex w-fit items-center justify-center gap-2 rounded-lg bg-[#FDCC02] font-semibold text-[#1E2358] px-3 py-2 text-base leading-6"
+          >
+            <img
+              src="icons/download-arrow-icon.png"
+              alt="Download"
+              class="h-4 w-4"
+            />
+            Download E-Ticket
+          </button>
+        </div>
+        <!-- Traveler Details section -->
+        <section
+          class="mt-4 rounded-xl border border-[#B6BAC3] sm:mt-8 px-4 py-4"
+        >
+          <h2 class="font-semibold text-[#1E2358] text-base leading-6">
+            Traveler Details
+          </h2>
+
+          <div class="grid grid-cols-2 items-start mt-4 gap-x-10 gap-y-4">
+            <div class="min-w-0">
+              <p class="font-medium text-[#5B616E] text-base leading-6">Name</p>
+              <p class="mt-1 font-medium text-[#1E2358] text-base leading-6">
+                Marry Morni
+              </p>
+            </div>
+            <div class="min-w-0">
+              <p class="font-medium text-[#5B616E] text-base leading-6">
+                Email
+              </p>
+              <p
+                class="mt-1 max-w-[72px] break-words font-medium text-[#1E2358] sm:max-w-none text-base leading-6"
+              >
+                info@gmail.com
+              </p>
+            </div>
+            <div class="min-w-0">
+              <p class="font-medium text-[#5B616E] text-base leading-6">
+                Passport Number
+              </p>
+              <p class="mt-1 font-medium text-[#1E2358] text-base leading-6">
+                23145422
+              </p>
+            </div>
+            <div class="min-w-0">
+              <p
+                class="max-w-[100.5px] sm:max-w-[237px] sm:[237px] font-medium text-[#5B616E] text-base leading-6"
+              >
+                Airline Booking Code
+              </p>
+              <p
+                class="mt-1 font-medium text-[#1E2358] sm:max-w-none text-base leading-6"
+              >
+                G13BSZZ
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Qutar Airways Section -->
+        <section
+          class="mt-3 rounded-xl border border-[#6B7280] px-4 py-3 sm:mt-8 sm:px-5 sm:py-6"
+        >
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex items-center gap-2">
+              <img
+                src="icons/skyvela-logo-mark.png"
+                alt="Qatar Airways"
+                class="h-[23px] w-[26px] object-contain sm:h-[35px] sm:w-[39px]"
+              />
+              <span
+                class="font-medium text-[#1E2358] text-[12.74px] leading-[16.98px]"
+              >
+                QutarAirways
+              </span>
+            </div>
+
+            <div class="text-right">
+              <div class="flex items-center justify-end gap-1 sm:gap-2">
+                <img
+                  src="icons/baggage-icon.svg"
+                  alt="Baggage included"
+                  class="h-[11px] w-[7px] shrink-0 sm:h-[13px] sm:w-[9px]"
+                />
+                <span class="text-xs font-normal leading-4 text-[#5B616E]">
+                  23kg included
+                </span>
+              </div>
+              <p class="mt-1 text-base font-semibold leading-6 text-[#5B616E]">
+                USD
+                <span class="text-base font-semibold leading-6 text-[#1E2358]">
+                  +25
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-4 mb-1 flex items-center gap-2 sm:mt-6 sm:gap-5">
+            <div class="min-w-[40px] text-left sm:min-w-0">
+              <p
+                class="text-xl font-semibold leading-7 tracking-normal text-[#1E2358]"
+              >
+                20:15
+              </p>
+              <p class="font-medium text-[#5B616E] text-sm leading-5">DAC</p>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="flex items-center">
+                <div
+                  class="h-[10px] w-[10px] rounded-full bg-[#1E2358] sm:h-3 sm:w-3"
+                ></div>
+                <div
+                  class="mx-1 h-px flex-1 border-t border-dashed border-[#1E2358]"
+                ></div>
+                <div
+                  class="h-[10px] w-[10px] rounded-full bg-[#1E2358] sm:h-3 sm:w-3"
+                ></div>
+              </div>
+
+              <div
+                class="absolute left-1/2 top-[calc(50%+9px)] w-max -translate-x-1/2 -translate-y-1/2"
+              >
+                <div
+                  class="rounded-3xl bg-[#EDEEF1] px-3 py-1 text-sm font-semibold leading-5 text-[#1E2358] sm:text-base sm:leading-6"
+                >
+                  12 hr 30 min
+                </div>
+                <p class="mt-2 text-center text-sm font-semibold leading-5 text-[#5B616E]">
+                  2 stop
+                </p>
+              </div>
+            </div>
+
+            <div class="min-w-[40px] text-right sm:min-w-0">
+              <p
+                class="text-xl font-semibold leading-7 tracking-normal text-[#1E2358]"
+              >
+                12:25
+              </p>
+              <p class="font-medium text-[#5B616E] text-sm leading-5">CXB</p>
+            </div>
+          </div>
+
+          <div class="mt-4 border-t border-[#B6BAC3]"></div>
+
+          <div class="mt-4 flex items-end justify-between gap-4">
+            <div>
+              <p class="text-lg font-semibold leading-[26px] text-[#1E2358]">
+                Paris, France
+              </p>
+              <p class="mt-2 text-sm font-normal leading-5 text-[#5B616E]">
+                2 Guest | 1 Room
+              </p>
+            </div>
+
+            <img
+              src="icons/hotel-lobby-photo.png"
+              alt="Paris hotel"
+              class="rounded-lg object-cover h-[72px] w-[66px]"
+            />
+          </div>
+        </section>
+
+        <div
+          class="mt-8 flex items-center justify-between rounded-lg bg-[#EDEEF1] px-5 py-5"
+        >
+          <p class="text-base font-normal leading-6 text-[#5B616E]">
+            Total Pay
+          </p>
+          <p class="font-semibold text-[#1E2358] text-base leading-6">
+            USD 3575
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
