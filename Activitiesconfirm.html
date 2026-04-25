@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        font-family: "Inter" !important;
+      }
+    </style>
+    <title>Activities Booking Confirmation</title>
+  </head>
+  <body class="min-h-screen bg-[#EDEEF1] text-[#1E2358]">
+    <section class="min-h-screen py-4 sm:py-8">
+      <div class="mx-auto max-w-[1140px] px-4 sm:px-0">
+        <div
+          class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
+        >
+          <h1
+            class="text-2xl font-semibold leading-7 tracking-[-0.2px] text-[#1E2358]"
+          >
+            Review Your Booking
+          </h1>
+
+          <div
+            class="flex items-center gap-1 text-[10px] leading-[14px] sm:text-sm font-semibold sm:leading-5 sm:justify-end sm:gap-4"
+          >
+            <p class="whitespace-nowrap text-[#1E2358]">Traveler Details</p>
+            <img
+              src="icons/chevron-right.svg"
+              alt="right arrow"
+              class="h-3.5 w-3.5 sm:h-6 sm:w-6"
+            />
+            <p class="whitespace-nowrap text-[#1E2358]">Review</p>
+            <img
+              src="icons/chevron-right.svg"
+              alt="right arrow"
+              class="h-3.5 w-3.5 sm:h-6 sm:w-6"
+            />
+            <p class="whitespace-nowrap text-[#1E2358]">Payment</p>
+            <img
+              src="icons/chevron-right.svg"
+              alt="right arrow"
+              class="h-3.5 w-3.5 sm:h-6 sm:w-6"
+            />
+            <p class="whitespace-nowrap text-[#5B616E]">Confirmation</p>
+          </div>
+        </div>
+
+        <div class="mx-auto mt-6 max-w-[692px] sm:mt-10">
+          <section
+            class="w-full rounded-2xl border-[0.5px] border-none bg-[#FFFFFF] px-3 py-6 sm:px-[50px] sm:py-[50px]"
+          >
+            <div class="flex flex-col items-center text-center">
+              <img
+                src="icons/verified-badge-check.svg"
+                alt="Success badge"
+                class="h-10 w-10 sm:h-[46px] sm:w-[46px]"
+              />
+
+              <h2
+                class="mt-5 max-w-[319px] text-xl font-semibold leading-7 tracking-[-0.2px] text-[#1E2358] sm:max-w-none sm:text-[24px] sm:leading-7"
+              >
+                Your Hotel Booking is successful!
+              </h2>
+
+              <p
+                class="mt-3 max-w-[319px] text-sm font-normal leading-5 text-[#5B616E] sm:max-w-[442px]"
+              >
+                Thanks for booking with Skyvela. We have sent an e-ticket to
+                your registered email ID and mobile
+              </p>
+            </div>
+
+            <div
+              class="mt-8 flex flex-col gap-3 sm:mt-5 sm:flex-row sm:items-start sm:justify-between"
+            >
+              <div>
+                <p class="text-sm font-normal leading-5 text-[#5B616E]">
+                  Booking Reference
+                </p>
+                <p
+                  class="mt-1 text-[20px] font-semibold leading-7 text-[#1E2358]"
+                >
+                  VYG-UU79R
+                </p>
+              </div>
+
+              <button
+                type="button"
+                class="flex w-fit items-center gap-2 rounded-lg bg-[#FDCC02] px-3 py-2 text-base font-semibold leading-6 text-[#1E2358]"
+              >
+                <img
+                  src="icons/download-arrow-icon.png"
+                  alt="Download"
+                  class="h-4 w-4"
+                />
+                Download E-Ticket
+              </button>
+            </div>
+
+            <section
+              class="rounded-xl mt-4 sm:mt-8 border border-[#B6BAC3] bg-[#FFFFFF] px-3 py-3 sm:px-6 sm:py-5"
+            >
+              <h2
+                class="text-[18px] max-w-[295px] sm:max-w-[346px] font-semibold leading-[26px] tracking-normal text-[#1E2358]"
+              >
+                Kaptai Lake: Daylong Tour | Thu, Mar 26
+              </h2>
+
+              <div
+                class="mt-2 flex flex-wrap items-center gap-x-[9px] gap-y-1 text-xs font-normal leading-4 text-[#5B616E]"
+              >
+                <span class="flex items-center gap-1">
+                  <img
+                    src="icons/location-marker-small-icon.svg"
+                    alt="Location"
+                    class="h-3 w-3 shrink-0"
+                  />
+                  Rangamati
+                </span>
+                <span class="flex items-center gap-1">
+                  <img
+                    src="icons/clock-icon.svg"
+                    alt="Duration"
+                    class="h-3 w-3 shrink-0"
+                  />
+                  3 days
+                </span>
+                <span class="flex items-center gap-1">
+                  <img
+                    src="icons/group-users-small-icon.svg"
+                    alt="Adults"
+                    class="h-3 w-3 shrink-0"
+                  />
+                  2 Adults
+                </span>
+              </div>
+
+              <p
+                class="mt-2 text-sm font-medium leading-5 tracking-normal text-[#5B616E]"
+              >
+                Rangamati
+              </p>
+
+              <div class="mt-5 border-t border-[#B6BAC3]"></div>
+
+              <div class="mt-5 flex gap-3 flex-row items-end justify-between">
+                <div>
+                  <p
+                    class="text-base font-medium leading-6 tracking-normal text-[#1E2358]"
+                  >
+                    Options
+                  </p>
+                  <p
+                    class="mt-1 text-sm font-normal leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    Package Tour X 1
+                  </p>
+                </div>
+
+                <a
+                  href="#"
+                  class="text-sm font-medium leading-5 tracking-normal text-[#1E2358] underline"
+                >
+                  Tour Details
+                </a>
+              </div>
+            </section>
+
+            <div
+              class="mt-4 sm:mt-8 flex items-center justify-between rounded-lg bg-[#EDEEF1] px-3 py-3 sm:px-4"
+            >
+              <p
+                class="text-[14px] leading-5 sm:text-base font-normal sm:font-medium sm:leading-6 text-[#5B616E]"
+              >
+                Total Pay
+              </p>
+              <p class="text-base font-semibold leading-6 text-[#1E2358]">
+                USD 579
+              </p>
+            </div>
+          </section>
+
+          <div class="mt-5 flex justify-end gap-3 sm:mt-6">
+            <button
+              type="button"
+              class="rounded-lg bg-white px-4 py-4 text-center text-sm font-semibold leading-5 text-[#1E2358] sm:text-base sm:leading-6"
+            >
+              Search More Hotel
+            </button>
+            <button
+              type="button"
+              class="rounded-lg bg-[#1E2358] px-4 py-4 text-center text-sm font-semibold leading-5 text-white sm:text-base sm:leading-6"
+            >
+              Back to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
