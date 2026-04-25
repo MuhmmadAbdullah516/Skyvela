@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        font-family: "Inter" !important;
+      }
+    </style>
+    <title>Activities Payment</title>
+  </head>
+  <body class="min-h-screen bg-[#EDEEF1] text-[#1E2358]">
+    <section class="min-h-screen py-4 sm:py-8">
+      <div class="mx-auto max-w-[1140px] px-4 sm:px-0">
+        <div
+          class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
+        >
+          <h1
+            class="text-2xl font-semibold leading-7 tracking-[-0.2px] text-[#1E2358]"
+          >
+            Review Your Booking
+          </h1>
+
+          <div
+            class="flex items-center gap-1 text-[10px] leading-[14px] sm:text-sm font-semibold sm:leading-5 sm:justify-end sm:gap-4"
+          >
+            <p class="whitespace-nowrap text-[#1E2358]">Traveler Details</p>
+            <img
+              src="./icons/chevron-right.svg"
+              alt="right arrow"
+              class="h-3.5 w-3.5 sm:h-6 sm:w-6"
+            />
+            <p class="whitespace-nowrap text-[#1E2358]">Review</p>
+            <img
+              src="./icons/chevron-right.svg"
+              alt="right arrow"
+              class="h-3.5 w-3.5 sm:h-6 sm:w-6"
+            />
+            <p class="whitespace-nowrap text-[#1E2358]">Payment</p>
+            <img
+              src="./icons/chevron-right.svg"
+              alt="right arrow"
+              class="h-3.5 w-3.5 sm:h-6 sm:w-6"
+            />
+            <p class="whitespace-nowrap text-[#5B616E]">Confirmation</p>
+          </div>
+        </div>
+
+        <div
+          class="mt-4 sm:mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,694px)_416px] lg:items-start lg:gap-5"
+        >
+          <div class="w-full">
+            <section class="rounded-xl bg-white px-3 py-3 sm:px-6 sm:py-5">
+              <h2
+                class="text-lg max-w-[295px] sm:max-w-[346px] font-semibold leading-[26px] tracking-normal text-[#1E2358]"
+              >
+                Kaptai Lake: Daylong Tour | Thu, Mar 26
+              </h2>
+
+              <div
+                class="mt-2 flex flex-wrap items-center gap-x-[9px] gap-y-1 text-xs font-normal leading-4 text-[#5B616E]"
+              >
+                <span class="flex items-center gap-1">
+                  <img
+                    src="./icons/location-marker-small-icon.svg"
+                    alt="Location"
+                    class="h-3 w-3 shrink-0"
+                  />
+                  Rangamati
+                </span>
+                <span class="flex items-center gap-1">
+                  <img
+                    src="./icons/clock-icon.svg"
+                    alt="Duration"
+                    class="h-3 w-3 shrink-0"
+                  />
+                  3 days
+                </span>
+                <span class="flex items-center gap-1">
+                  <img
+                    src="./icons/group-users-small-icon.svg"
+                    alt="Adults"
+                    class="h-3 w-3 shrink-0"
+                  />
+                  2 Adults
+                </span>
+              </div>
+
+              <p
+                class="mt-2 text-sm font-medium leading-5 tracking-normal text-[#5B616E]"
+              >
+                Rangamati
+              </p>
+
+              <div class="mt-5 border-t border-[#B6BAC3]"></div>
+
+              <div class="mt-5 flex gap-3 flex-row items-end justify-between">
+                <div>
+                  <p
+                    class="text-base font-medium leading-6 tracking-normal text-[#1E2358]"
+                  >
+                    Options
+                  </p>
+                  <p
+                    class="mt-1 text-sm font-normal leading-5 tracking-normal text-[#5B616E]"
+                  >
+                    Package Tour X 1
+                  </p>
+                </div>
+
+                <a
+                  href="#"
+                  class="text-sm font-medium leading-5 tracking-normal text-[#1E2358] underline"
+                >
+                  Tour Details
+                </a>
+              </div>
+            </section>
+
+            <section
+              class="mt-4 sm:mt-6 rounded-xl bg-white px-3 py-3 sm:mt-8 sm:px-8 sm:py-8"
+            >
+              <h2
+                class="text-xl font-semibold leading-7 tracking-normal text-[#1E2358]"
+              >
+                Select your payment method:
+              </h2>
+
+              <label
+                class="mt-6 flex cursor-pointer gap-3 rounded-lg border border-[#B6BAC3] px-3 sm:px-4 py-2 flex-row items-center justify-between"
+              >
+                <div class="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="payment-option"
+                    checked
+                    class="h-5 w-5 accent-[#1E2358] outline-none focus:outline-none focus:ring-0"
+                  />
+                  <div>
+                    <p
+                      class="text-sm whitespace-nowrap leading-5 sm:text-base font-medium sm:leading-6 tracking-normal text-[#1E2358]"
+                    >
+                      Credit/Debit Card
+                    </p>
+                    <p
+                      class="text-xs whitespace-nowrap leading-4 sm:text-sm font-normal sm:leading-5 tracking-normal text-[#5B616E]"
+                    >
+                      Pay with Visa, Master Card...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex justify-end gap-[5.27px] sm:gap-[8.2px]">
+                  <img
+                    src="./icons/credit-card-icon.svg"
+                    alt="Card"
+                    class="h-[22px] w-[16px] sm:h-[25px] sm:w-[35px]"
+                  />
+                  <img
+                    src="./icons/visa-logo.svg"
+                    alt="Visa"
+                    class="h-[22px] w-[16px] sm:h-[25px] sm:w-[35px]"
+                  />
+                  <img
+                    src="./icons/bank-alfalah-logo.svg"
+                    alt="Mastercard"
+                    class="h-[22px] w-[16px] sm:h-[25.92px] sm:w-[35px]"
+                  />
+                </div>
+              </label>
+
+              <label
+                class="mt-3 flex cursor-pointer gap-3 rounded-lg border border-[#B6BAC3] px-3 sm:px-4 py-2 flex-row items-center justify-between"
+              >
+                <div class="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="payment-option"
+                    class="h-5 w-5 accent-[#1E2358] outline-none focus:outline-none focus:ring-0"
+                  />
+                  <div>
+                    <p
+                      class="text-sm leading-5 sm:text-base font-medium sm:leading-6 whitespace-nowrap tracking-normal text-[#1E2358]"
+                    >
+                      Cryptocurrency
+                    </p>
+                    <p
+                      class="text-xs leading-4 sm:text-sm font-normal sm:leading-5 whitespace-nowrap tracking-normal text-[#5B616E]"
+                    >
+                      Pay with BTC, ETH,XRP...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex justify-end gap-[4.17px] sm:gap-[8.2px]">
+                  <img
+                    src="icons/bitcoin-logo.svg"
+                    alt="Bitcoin"
+                    class="w-[23] h-[23] sm:h-[26px] sm:w-[26px]"
+                  />
+                  <img
+                    src="icons/circle-s-logo.svg"
+                    alt="Crypto"
+                    class="w-[23] h-[23] sm:h-[26px] sm:w-[26px]"
+                  />
+                  <img
+                    src="icons/ethereum-logo.svg"
+                    alt="Ethereum"
+                    class="w-[23] h-[23] sm:h-[26px] sm:w-[26px]"
+                  />
+                </div>
+              </label>
+            </section>
+
+            <div class="mt-6 flex justify-end gap-4 sm:mt-8">
+              <button
+                type="button"
+                class="text-sm leading-5 rounded-lg bg-white px-4 py-4 text-center sm:text-base font-semibold sm:leading-6 tracking-normal text-[#1E2358]"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                class="rounded-lg text-sm leading-5 bg-[#1E2358] px-4 py-4 text-center sm:text-base font-semibold sm:leading-6 tracking-normal text-white whitespace-nowrap"
+              >
+                Proceed to Payment
+              </button>
+            </div>
+          </div>
+
+          <aside
+            class="h-fit w-full rounded-xl bg-white px-3 py-3 sm:px-6 sm:py-6"
+          >
+            <div class="flex items-center gap-4">
+              <img
+                src="icons/kaptai-lake-tour-photo.png"
+                alt="Kaptai Lake"
+                class="w-[72px] h-20 sm:h-[66px] sm:w-[72px] rounded-lg object-cover"
+              />
+              <div>
+                <p
+                  class="text-lg font-semibold leading-[26px] tracking-normal text-[#1E2358]"
+                >
+                  Kaptai Lake: Daylong Tour
+                </p>
+                <p
+                  class="text-sm font-normal leading-5 tracking-normal text-[#5B616E]"
+                >
+                  Rangamati
+                </p>
+              </div>
+            </div>
+
+            <hr class="mt-3 h-px border-0 bg-[#B6BAC3]" />
+
+            <div class="mt-3">
+              <p
+                class="text-base font-medium leading-6 tracking-normal text-[#1E2358]"
+              >
+                Fare Summary
+              </p>
+
+              <div class="mt-3 flex items-start justify-between gap-4">
+                <p
+                  class="text-sm font-normal leading-5 tracking-normal text-[#5B616E]"
+                >
+                  Package Tour X 1
+                </p>
+                <p
+                  class="text-sm font-normal leading-5 tracking-normal text-[#5B616E]"
+                >
+                  USD
+                  <span class="font-semibold text-base leading-6 text-[#1E2358]"
+                    >3500</span
+                  >
+                </p>
+              </div>
+            </div>
+
+            <hr class="mt-5 h-px border-0 bg-[#B6BAC3]" />
+
+            <div class="mt-5">
+              <p
+                class="text-base font-medium leading-6 tracking-normal text-[#1E2358]"
+              >
+                Add-ons
+              </p>
+
+              <div class="mt-3 flex items-start justify-between gap-4">
+                <p
+                  class="text-sm font-normal leading-5 tracking-normal text-[#5B616E]"
+                >
+                  Extra 1 days
+                </p>
+                <p
+                  class="text-sm font-normal leading-5 tracking-normal text-[#5B616E]"
+                >
+                  USD
+                  <span class="font-semibold text-base leading-6 text-[#1E2358]"
+                    >1200</span
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="mt-3 flex items-center justify-between rounded-lg bg-[#FDCC02] px-4 py-3"
+            >
+              <p class="text-base font-semibold leading-6 text-[#1E2358]">
+                Pay Now
+              </p>
+              <p class="text-base font-semibold leading-6 text-[#1E2358]">
+                USD 4700
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
