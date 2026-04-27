@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        font-family: "Inter", sans-serif !important;
+      }
+
+      .gallery-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+          180deg,
+          rgba(30, 35, 88, 0) 45%,
+          rgba(30, 35, 88, 0.833799) 85%,
+          #1e2358 100%
+        );
+      }
+
+      .gallery-card > * {
+        z-index: 2;
+      }
+    </style>
+    <title>Blog Gallery</title>
+  </head>
+  <body class="min-h-screen bg-[#EDEEF1] text-[#1E2358]">
+    <main class="max-w-[1440px] mx-auto mt-10">
+      <section class="mx-auto max-w-[1140px]">
+        <div
+          class="flex w-full flex-col gap-3 sm:flex-row sm:items-start sm:gap-8"
+        >
+          <p
+            class="shrink-0 pt-2 text-xl font-semibold uppercase leading-7 tracking-normal text-[#1E2358]"
+          >
+            Filter:
+          </p>
+
+          <div class="w-full sm:hidden">
+            <label for="gallery-filter" class="sr-only">Select a filter</label>
+            <div class="relative ml-auto w-[84px]">
+              <select
+                id="gallery-filter"
+                name="gallery-filter"
+                class="h-10 w-full cursor-pointer appearance-none rounded-[8px] border-0 bg-white pl-3 pr-8 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358] outline-none"
+              >
+                <option selected>All</option>
+                <option>Beaches</option>
+                <option>Cities</option>
+                <option>Nature</option>
+                <option>Food</option>
+                <option>Adventure</option>
+                <option>Luxury</option>
+              </select>
+              <img
+                src="./icons/chevron-down.svg"
+                alt=""
+                aria-hidden="true"
+                class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2"
+              />
+            </div>
+          </div>
+
+          <div
+            class="hidden w-full gap-3 sm:grid sm:flex-1 sm:grid-cols-7 sm:items-center"
+          >
+            <span
+              class="w-full cursor-pointer rounded-[64px] bg-[#1E2358] px-3 py-2 text-center text-[16px] font-medium leading-[24px] tracking-normal text-[#FFFFFF]"
+            >
+              All
+            </span>
+            <span
+              class="w-full cursor-pointer rounded-[64px] bg-white px-3 py-2 text-center text-[16px] font-medium leading-[24px] tracking-normal text-[#5B616E]"
+            >
+              Beaches
+            </span>
+            <span
+              class="w-full cursor-pointer rounded-[64px] bg-white px-3 py-2 text-center text-[16px] font-medium leading-[24px] tracking-normal text-[#5B616E]"
+            >
+              Cities
+            </span>
+            <span
+              class="w-full cursor-pointer rounded-[64px] bg-white px-3 py-2 text-center text-[16px] font-medium leading-[24px] tracking-normal text-[#5B616E]"
+            >
+              Nature
+            </span>
+            <span
+              class="w-full cursor-pointer rounded-[64px] bg-white px-3 py-2 text-center text-[16px] font-medium leading-[24px] tracking-normal text-[#5B616E]"
+            >
+              Food
+            </span>
+            <span
+              class="w-full cursor-pointer rounded-[64px] bg-white px-3 py-2 text-center text-[16px] font-medium leading-[24px] tracking-normal text-[#5B616E]"
+            >
+              Adventure
+            </span>
+            <span
+              class="w-full cursor-pointer rounded-[64px] bg-white px-3 py-2 text-center text-[16px] font-medium leading-[24px] tracking-normal text-[#5B616E]"
+            >
+              Luxury
+            </span>
+          </div>
+        </div>
+
+        <div
+          id="galleryGrid"
+          class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-[20px] lg:gap-y-[16px]"
+        >
+          <div
+            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            style="
+              background-image: url(&quot;./icons/santorini-windmills.jpg&quot;);
+            "
+          >
+            <span
+              class="absolute right-[5.67px] top-[5px] z-[3] inline-flex h-10 w-10 cursor-pointer items-center justify-center"
+              aria-hidden="true"
+            >
+              <img
+                src="./icons/gallery-expand-icon.svg"
+                alt=""
+                class="h-10 w-10"
+              />
+            </span>
+            <div class="absolute flex flex-col bottom-6 left-6">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./icons/gallery-location-pin-icon.svg"
+                  alt=""
+                  class="h-[18px] w-4"
+                />
+                <span
+                  class="text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+                  >Petra, Jordan</span
+                >
+              </div>
+              <h2
+                class="mt-1 text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+              >
+                The Rose City of Petra
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-[6px]">
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Culture
+                </span>
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Wonders
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            style="
+              background-image: url(&quot;./icons/cliffs-of-moher-aerial.jpg&quot;);
+            "
+          >
+            <span
+              class="absolute right-[5.67px] top-[5px] z-[3] inline-flex h-10 w-10 cursor-pointer items-center justify-center"
+              aria-hidden="true"
+            >
+              <img
+                src="./icons/gallery-expand-icon.svg"
+                alt=""
+                class="h-10 w-10"
+              />
+            </span>
+            <div class="absolute flex flex-col bottom-6 left-6">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./icons/gallery-location-pin-icon.svg"
+                  alt=""
+                  class="h-[18px] w-4"
+                />
+                <span
+                  class="text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+                  >Cliffs of Moher, Ireland</span
+                >
+              </div>
+              <h2
+                class="mt-1 text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+              >
+                Wild Atlantic Edge
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-[6px]">
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Nature
+                </span>
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Dramatic
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            style="
+              background-image: url(&quot;./icons/spotted-deer-wildlife.jpg&quot;);
+            "
+          >
+            <span
+              class="absolute right-[5.67px] top-[5px] z-[3] inline-flex h-10 w-10 cursor-pointer items-center justify-center"
+              aria-hidden="true"
+            >
+              <img
+                src="./icons/gallery-expand-icon.svg"
+                alt=""
+                class="h-10 w-10"
+              />
+            </span>
+            <div class="absolute flex flex-col bottom-6 left-6">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./icons/gallery-location-pin-icon.svg"
+                  alt=""
+                  class="h-[18px] w-4"
+                />
+                <span
+                  class="text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+                  >Santorini, Greece</span
+                >
+              </div>
+              <h2
+                class="mt-1 text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+              >
+                Cave Hotel with Infinity Pool
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-[6px]">
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Culture
+                </span>
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Luxury
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            style="
+              background-image: url(&quot;./icons/iceland-street-performer.png&quot;);
+            "
+          >
+            <span
+              class="absolute right-[5.67px] top-[5px] z-[3] inline-flex h-10 w-10 cursor-pointer items-center justify-center"
+              aria-hidden="true"
+            >
+              <img
+                src="./icons/gallery-expand-icon.svg"
+                alt=""
+                class="h-10 w-10"
+              />
+            </span>
+            <div class="absolute flex flex-col bottom-6 left-6">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./icons/gallery-location-pin-icon.svg"
+                  alt=""
+                  class="h-[18px] w-4"
+                />
+                <span
+                  class="text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+                  >Iceland</span
+                >
+              </div>
+              <h2
+                class="mt-1 text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+              >
+                Northern Lights Aurora
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-[6px]">
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Culture
+                </span>
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Must-See
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            style="
+              background-image: url(&quot;./icons/athens-garden-landmark.jpg&quot;);
+            "
+          >
+            <span
+              class="absolute right-[5.67px] top-[5px] z-[3] inline-flex h-10 w-10 cursor-pointer items-center justify-center"
+              aria-hidden="true"
+            >
+              <img
+                src="./icons/gallery-expand-icon.svg"
+                alt=""
+                class="h-10 w-10"
+              />
+            </span>
+            <div class="absolute flex flex-col bottom-6 left-6">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./icons/gallery-location-pin-icon.svg"
+                  alt=""
+                  class="h-[18px] w-4"
+                />
+                <span
+                  class="text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+                  >History of Athens</span
+                >
+              </div>
+              <h2
+                class="mt-1 text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+              >
+                Rising from a Mycenaean settlement
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-[6px]">
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Culture
+                </span>
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Wonders
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            style="
+              background-image: url(&quot;./icons/istanbul-palm-resort.jpg&quot;);
+            "
+          >
+            <span
+              class="absolute right-[5.67px] top-[5px] z-[3] inline-flex h-10 w-10 cursor-pointer items-center justify-center"
+              aria-hidden="true"
+            >
+              <img
+                src="./icons/gallery-expand-icon.svg"
+                alt=""
+                class="h-10 w-10"
+              />
+            </span>
+            <div class="absolute flex flex-col bottom-6 left-6">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./icons/gallery-location-pin-icon.svg"
+                  alt=""
+                  class="h-[18px] w-4"
+                />
+                <span
+                  class="text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+                  >Ancient Istanbul</span
+                >
+              </div>
+              <h2
+                class="mt-1 text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+              >
+                Byzantium by Greek colonists around
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-[6px]">
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Culture
+                </span>
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Wonders
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            style="
+              background-image: url(&quot;./icons/mountain-valley-landscape.jpg&quot;);
+            "
+          >
+            <span
+              class="absolute right-[5.67px] top-[5px] z-[3] inline-flex h-10 w-10 cursor-pointer items-center justify-center"
+              aria-hidden="true"
+            >
+              <img
+                src="./icons/gallery-expand-icon.svg"
+                alt=""
+                class="h-10 w-10"
+              />
+            </span>
+            <div class="absolute flex flex-col bottom-6 left-6">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./icons/gallery-location-pin-icon.svg"
+                  alt=""
+                  class="h-[18px] w-4"
+                />
+                <span
+                  class="text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+                  >Attractions in Barcelona</span
+                >
+              </div>
+              <h2
+                class="mt-1 text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+              >
+                Sagrada Familia, Park Guell
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-[6px]">
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Culture
+                </span>
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Wonders
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            style="
+              background-image: url(&quot;./icons/istanbul-city-tramway.jpg&quot;);
+            "
+          >
+            <span
+              class="absolute right-[5.67px] top-[5px] z-[3] inline-flex h-10 w-10 cursor-pointer items-center justify-center"
+              aria-hidden="true"
+            >
+              <img
+                src="./icons/gallery-expand-icon.svg"
+                alt=""
+                class="h-10 w-10"
+              />
+            </span>
+            <div class="absolute flex flex-col bottom-6 left-6">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./icons/gallery-location-pin-icon.svg"
+                  alt=""
+                  class="h-[18px] w-4"
+                />
+                <span
+                  class="text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+                  >Sites of Sydney</span
+                >
+              </div>
+              <h2
+                class="mt-1 text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+              >
+                Discover places to visit, fun
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-[6px]">
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Culture
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            style="
+              background-image: url(&quot;./icons/mexico-city-palace.png&quot;);
+            "
+          >
+            <span
+              class="absolute right-[5.67px] top-[5px] z-[3] inline-flex h-10 w-10 cursor-pointer items-center justify-center"
+              aria-hidden="true"
+            >
+              <img
+                src="./icons/gallery-expand-icon.svg"
+                alt=""
+                class="h-10 w-10"
+              />
+            </span>
+            <div class="absolute flex flex-col bottom-6 left-6">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./icons/gallery-location-pin-icon.svg"
+                  alt=""
+                  class="h-[18px] w-4"
+                />
+                <span
+                  class="text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+                  >Treasures of Mexico City</span
+                >
+              </div>
+              <h2
+                class="mt-1 text-base leading-6 uppercase font-medium tracking-normal text-[#FFFFFF]"
+              >
+                Mexico City is a vibrant, historic treasure
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-[6px]">
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Culture
+                </span>
+                <span
+                  class="rounded-[6px] bg-[#FFFFFF66] px-3 py-1 text-base font-medium leading-6 tracking-normal text-[#FFFFFF]"
+                >
+                  Wonders
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
