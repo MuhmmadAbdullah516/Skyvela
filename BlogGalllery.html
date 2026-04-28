@@ -43,63 +43,72 @@
     <title>Blog Gallery</title>
   </head>
   <body class="min-h-screen bg-[#EDEEF1] text-[#1E2358]">
-    <main class="max-w-[1440px] mx-auto mt-10 px-4">
+    <main class="max-w-[1440px] mx-auto my-10 px-4">
       <section class="mx-auto max-w-[1140px]">
-        <div class="flex w-full flex-col gap-3 flex-row items-start sm:gap-8">
+        <div
+          class="flex w-full flex-col gap-3 flex-row items-start justify-between sm:gap-8"
+        >
           <p
             class="shrink-0 text-lg leading-6.5 pt-2 sm:text-xl font-semibold uppercase sm:leading-7 tracking-normal text-[#1E2358]"
           >
             Filter:
           </p>
 
-          <details class="relative ml-auto w-[108px] sm:hidden">
+          <details class="relative sm:hidden">
             <summary
-              class="mobile-filter-summary flex h-10 w-full cursor-pointer items-center justify-between rounded-[8px] bg-white px-3 text-[14px] font-medium leading-5 tracking-normal text-[#0F1416] outline-none"
+              class="mobile-filter-summary flex h-10 w-[63px] cursor-pointer items-center justify-between rounded-[8px] bg-white px-3 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#0F1416] outline-none"
             >
               <span>All</span>
               <img
                 src="./icons/dropdown-chevron-icon.svg"
-                alt=""
+                alt="dropdown"
                 aria-hidden="true"
-                class="h-[7px] w-3 shrink-0"
+                class="h-[5px] w-2.5 shrink-0"
               />
             </summary>
 
             <div
-              class="absolute right-0 top-[calc(100%+8px)] z-10 w-[108px] overflow-hidden rounded-[12px] bg-white py-2 shadow-[0_8px_24px_rgba(15,20,22,0.12)]"
+              class="absolute right-0 top-[calc(100%+8px)] z-10 w-[108px] overflow-hidden rounded-md bg-[#FFFFFF] py-2 px-3 shadow-[0_8px_24px_rgba(15,20,22,0.12)]"
             >
-              <div
-                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
-              >
-                All
+              <div class="flex justify-between">
+                <div
+                  class="text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+                >
+                  All
+                </div>
+                <img
+                  src="icons/dropdown-chevron-icon.svg"
+                  alt="dropdown"
+                  class="h-[5px] w-2.5 shrink-0"
+                />
               </div>
               <div
-                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+                class="text-[14px] mt-2 font-medium leading-5 tracking-normal text-[#1E2358]"
               >
                 Beaches
               </div>
               <div
-                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+                class="text-[14px] mt-2 font-medium leading-5 tracking-normal text-[#1E2358]"
               >
                 Cities
               </div>
               <div
-                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+                class="text-[14px] mt-2 font-medium leading-5 tracking-normal text-[#1E2358]"
               >
                 Nature
               </div>
               <div
-                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+                class="text-[14px] mt-2 leading-5 tracking-normal text-[#1E2358]"
               >
                 Food
               </div>
               <div
-                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+                class="text-[14px] mt-2 font-medium leading-5 tracking-normal text-[#1E2358]"
               >
                 Adventure
               </div>
               <div
-                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+                class="text-[14px] mt-2 font-medium leading-5 tracking-normal text-[#1E2358]"
               >
                 Luxury
               </div>
@@ -152,7 +161,7 @@
           class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-[20px] lg:gap-y-[16px]"
         >
           <div
-            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            class="gallery-card relative h-[352px] w-full max-w-[343px] cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:max-w-[366.67px]"
             style="
               background-image: url(&quot;./icons/santorini-windmills.jpg&quot;);
             "
@@ -200,7 +209,7 @@
           </div>
 
           <div
-            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            class="gallery-card relative h-[352px] w-full max-w-[343px] cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:max-w-[366.67px]"
             style="
               background-image: url(&quot;./icons/cliffs-of-moher-aerial.jpg&quot;);
             "
@@ -248,7 +257,7 @@
           </div>
 
           <div
-            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            class="gallery-card relative h-[352px] w-full max-w-[343px] cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:max-w-[366.67px]"
             style="
               background-image: url(&quot;./icons/spotted-deer-wildlife.jpg&quot;);
             "
@@ -296,7 +305,7 @@
           </div>
 
           <div
-            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            class="gallery-card relative h-[352px] w-full max-w-[343px] cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:max-w-[366.67px]"
             style="
               background-image: url(&quot;./icons/iceland-street-performer.png&quot;);
             "
@@ -344,7 +353,7 @@
           </div>
 
           <div
-            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            class="gallery-card relative h-[352px] w-full max-w-[343px] cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:max-w-[366.67px]"
             style="
               background-image: url(&quot;./icons/athens-garden-landmark.jpg&quot;);
             "
@@ -392,7 +401,7 @@
           </div>
 
           <div
-            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            class="gallery-card relative h-[352px] w-full max-w-[343px] cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:max-w-[366.67px]"
             style="
               background-image: url(&quot;./icons/istanbul-palm-resort.jpg&quot;);
             "
@@ -440,7 +449,7 @@
           </div>
 
           <div
-            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            class="gallery-card relative h-[352px] w-full max-w-[343px] cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:max-w-[366.67px]"
             style="
               background-image: url(&quot;./icons/mountain-valley-landscape.jpg&quot;);
             "
@@ -488,7 +497,7 @@
           </div>
 
           <div
-            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            class="gallery-card relative h-[352px] w-full max-w-[343px] cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:max-w-[366.67px]"
             style="
               background-image: url(&quot;./icons/istanbul-city-tramway.jpg&quot;);
             "
@@ -531,7 +540,7 @@
           </div>
 
           <div
-            class="gallery-card relative cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:h-[352px] lg:w-[366.67px]"
+            class="gallery-card relative h-[352px] w-full max-w-[343px] cursor-pointer overflow-hidden rounded-[16px] bg-[#1E2358] bg-cover bg-center bg-no-repeat shadow-[0_2px_10px_rgba(30,35,88,0.08)] lg:max-w-[366.67px]"
             style="
               background-image: url(&quot;./icons/mexico-city-palace.png&quot;);
             "
