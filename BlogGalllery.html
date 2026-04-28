@@ -31,45 +31,80 @@
       .gallery-card > * {
         z-index: 2;
       }
+
+      .mobile-filter-summary {
+        list-style: none;
+      }
+
+      .mobile-filter-summary::-webkit-details-marker {
+        display: none;
+      }
     </style>
     <title>Blog Gallery</title>
   </head>
   <body class="min-h-screen bg-[#EDEEF1] text-[#1E2358]">
-    <main class="max-w-[1440px] mx-auto mt-10">
+    <main class="max-w-[1440px] mx-auto mt-10 px-4">
       <section class="mx-auto max-w-[1140px]">
-        <div
-          class="flex w-full flex-col gap-3 sm:flex-row sm:items-start sm:gap-8"
-        >
+        <div class="flex w-full flex-col gap-3 flex-row items-start sm:gap-8">
           <p
-            class="shrink-0 pt-2 text-xl font-semibold uppercase leading-7 tracking-normal text-[#1E2358]"
+            class="shrink-0 text-lg leading-6.5 pt-2 sm:text-xl font-semibold uppercase sm:leading-7 tracking-normal text-[#1E2358]"
           >
             Filter:
           </p>
 
-          <div class="w-full sm:hidden">
-            <label for="gallery-filter" class="sr-only">Select a filter</label>
-            <div class="relative ml-auto w-[84px]">
-              <select
-                id="gallery-filter"
-                name="gallery-filter"
-                class="h-10 w-full cursor-pointer appearance-none rounded-[8px] border-0 bg-white pl-3 pr-8 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358] outline-none"
-              >
-                <option selected>All</option>
-                <option>Beaches</option>
-                <option>Cities</option>
-                <option>Nature</option>
-                <option>Food</option>
-                <option>Adventure</option>
-                <option>Luxury</option>
-              </select>
+          <details class="relative ml-auto w-[108px] sm:hidden">
+            <summary
+              class="mobile-filter-summary flex h-10 w-full cursor-pointer items-center justify-between rounded-[8px] bg-white px-3 text-[14px] font-medium leading-5 tracking-normal text-[#0F1416] outline-none"
+            >
+              <span>All</span>
               <img
-                src="./icons/chevron-down.svg"
+                src="./icons/dropdown-chevron-icon.svg"
                 alt=""
                 aria-hidden="true"
-                class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2"
+                class="h-[7px] w-3 shrink-0"
               />
+            </summary>
+
+            <div
+              class="absolute right-0 top-[calc(100%+8px)] z-10 w-[108px] overflow-hidden rounded-[12px] bg-white py-2 shadow-[0_8px_24px_rgba(15,20,22,0.12)]"
+            >
+              <div
+                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+              >
+                All
+              </div>
+              <div
+                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+              >
+                Beaches
+              </div>
+              <div
+                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+              >
+                Cities
+              </div>
+              <div
+                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+              >
+                Nature
+              </div>
+              <div
+                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+              >
+                Food
+              </div>
+              <div
+                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+              >
+                Adventure
+              </div>
+              <div
+                class="px-6 py-2 text-[14px] font-medium leading-5 tracking-normal text-[#1E2358]"
+              >
+                Luxury
+              </div>
             </div>
-          </div>
+          </details>
 
           <div
             class="hidden w-full gap-3 sm:grid sm:flex-1 sm:grid-cols-7 sm:items-center"
